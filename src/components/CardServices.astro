@@ -1,58 +1,71 @@
 ---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog', ({ data }) => data);
 import { type CollectionEntry, getCollection } from 'astro:content';
 const portfolio_target = [
     {
         name: "Computer Repair, Virus Removal, and Data Recovery",
         description: "Your Trusted Partner in Computer Solutions",
         link: "/blog/repair-upgrade-recovery-virus-removal/",
+        image:'/blog-placeholder-1.png',
         progect:"#",
     },
     {
         name: "Business & Academic Computing Machines",
         description: "Powerful Computing Solutions for Your Business and Academic Needs",
         link: "/blog/busniness-adademic-computing/",
+        image:'/blog-placeholder-4.png',
         progect:"#",
     },
     {
         name: "Customized High-End Builds",
         description: "Unleash Your Creativity with Customized High-End Builds",
         link: "/blog/custom-high-end-computers/",
+        image:'/blog-placeholder-2.png',
         progect:"#",
     },
     {
         name: "Android TV Set-Top Boxes",
         description: "Welcome to the Future of Entertainment",
         link: "/blog/android-tv/",
+        image:'/blog-placeholder-3.png',
         progect:"#",
     },
     {
         name: "Cutting-Edge Mobile Devices",
         description: "Stay Connected and Productive with Our Range of Mobile Devices",
         link: "/blog/cutting-edge-mobile/",
+        image:'/blog-placeholder-5.png',
         progect:"#",
-    },    
+    },  
+    {
+        name: "Sustainable Computer Recycling Services",
+        description: "Stay Connected and Productive with Our Range of Mobile Devices",
+        link: "/blog/reduce-reuse-recycle/",
+        image:'/blog-placeholder-6.png',
+        progect:"#",
+    },      
 ]
 ---
+
+
 <main>
     <h2>Projects</h2>
     <div id="main">
-        {portfolio_target.map(project => (
-            <div class="target">
+        {portfolio_target.map(post => (
+            <div class="target"> 
                 <div class="project">
-                    <h3>{project.name}</h3>
-                    <a href={project.link} target="_blank">
-                        <span class="sr-only">Follow on githubub</span>
-                        <svg viewBox="0 0 16 16" aria-hidden="true" width="45" height="45" astro-icon="social/github"
-                            ><path
-                                fill="currentColor"
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                            ></path></svg>
+                    <h3>{post.name}</h3>
+                    <a href={post.link} target="_blank">
+                     <div class="hero-image">
+					    {post.image && <img style="width:100%" src={post.image} alt="" />}
+				    </div>
                     </a>
-                    <p>{project.description}</p>
-                    {project.link && <a href={project.progect}><button>Link to</button></a>}
+                    <p>{post.description}</p>
+                    <a href={post.link}><button>Read More</button></a>
                 </div>
             </div>
-        ))}
+         ))}
     </div>
 </main>
 <style>
@@ -74,27 +87,35 @@ const portfolio_target = [
     }
     .project {
         text-align: center;
-        padding: 7px;
+
     }
     .project img {
         display: block;
         margin: 0 auto;
     }
-    h2{
-        margin: 0 2rem;
-    }
-    h3{
-        font-size: 1.5rem;
-    }
+
+
     p{
         margin-top: 0px
     }
     button{
-        height: 3em;
-        width: 7em;
-        background-color: #E95420;
-        border-radius: 20%;
+        background-color: #04AA6D; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor:pointer;
+        border:5px solid black;
+        margin: 0 auto;
+        display:block;
     }
+    button:hover {
+        background-color: #008A4D; /* Green */
+        color: white;
+        }
     @media screen and (max-width: 700px) {
   #main {
     flex-wrap: wrap;
@@ -105,6 +126,7 @@ const portfolio_target = [
   }
  .project {
     text-align: left;
+    margin-bottom:3rem;
   }
  .project img {
     width: 100%;
