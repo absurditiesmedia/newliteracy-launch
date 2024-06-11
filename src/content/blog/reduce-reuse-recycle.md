@@ -1,12 +1,10 @@
 ---
-title: 'Computer Repair, Virus Removal, and Data Recovery'
+title: 'Sustainable Computer Recycling Services'
 description: 'Turning Your Old Tech into New Opportunities'
 pubDate: 'Mar 7 2024'
 heroImage: '/blog-placeholder-6.png'
 ---
 
-
-## Sustainable Computer Recycling Services
 
 *Turning Your Old Tech into New Opportunities*
 
