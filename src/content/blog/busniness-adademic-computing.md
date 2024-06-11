@@ -5,7 +5,6 @@ pubDate: 'Mar 8 2024'
 heroImage: '/blog-placeholder-4.png'
 ---
 
-## Computing Machines for School and Work
 
 *Powerful Computing Solutions for Your Business and Academic Needs*
 

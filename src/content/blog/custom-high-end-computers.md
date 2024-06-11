@@ -5,7 +5,6 @@ pubDate: 'Mar 9 2024'
 heroImage: '/blog-placeholder-2.png'
 ---
 
-## Customized High-End Builds
 
 *Unleash Your Creativity with Customized High-End Builds*
 

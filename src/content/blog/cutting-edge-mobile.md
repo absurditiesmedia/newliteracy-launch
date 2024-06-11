@@ -5,7 +5,6 @@ pubDate: 'Mar 09 2024'
 heroImage: '/blog-placeholder-5.png'
 ---
 
-## Cutting-Edge Mobile Devices
 
 *Stay Connected and Productive with Our Range of Mobile Devices*
 

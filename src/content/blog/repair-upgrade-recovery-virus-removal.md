@@ -4,7 +4,6 @@ description: 'Your Trusted Partner in Computer Solutions'
 pubDate: 'Mar 7 2024'
 heroImage: '/blog-placeholder-1.png'
 ---
-## Computer Repair, Virus Removal, and Data Recovery, and Recyling
 
 *Your Trusted Partner in Computer Solutions*
 
